@@ -61,8 +61,8 @@ def test_attrs(clc_resource, clc_server, attr, should):
 
 
 @pytest.mark.parametrize('group', [
-    'role=control',
-    'dc=CA1'
+    'role_control',
+    'dc_CA1'
 ])
 def test_groups(clc_resource, clc_server, group):
     _, _, groups = clc_server(clc_resource, 'CA1')

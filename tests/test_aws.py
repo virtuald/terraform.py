@@ -106,12 +106,12 @@ def test_attrs(aws_resource, aws_host, attr, should):
 
 @pytest.mark.parametrize(
     'group',
-    ['aws_ami=ami-fe100a96', 'aws_az=us-east-1e', 'aws_key_name=key-mi',
-     'aws_tenancy=default', 'aws_tag_sshUser=ec2-user', 'aws_tag_role=control',
-     'aws_tag_dc=aws', 'aws_tag_Name=mi-control-01',
-     'aws_vpc_security_group=sg-9c360cf8',
-     'aws_vpc_security_group=sg-9d360cf9', 'aws_subnet_id=subnet-1155c03a',
-     'role=control', 'dc=aws'])
+    ['aws_ami_ami_fe100a96', 'aws_az_us_east_1e', 'aws_key_name_key_mi',
+     'aws_tenancy_default', 'aws_tag_sshUser_ec2_user', 'aws_tag_role_control',
+     'aws_tag_dc_aws', 'aws_tag_Name_mi_control_01',
+     'aws_vpc_security_group_sg_9c360cf8',
+     'aws_vpc_security_group_sg_9d360cf9', 'aws_subnet_id_subnet_1155c03a',
+     'role_control', 'dc_aws'])
 def test_groups(aws_resource, aws_host, group):
     _, _, groups = aws_host(aws_resource, 'module_name')
     assert group in groups

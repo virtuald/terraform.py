@@ -89,14 +89,14 @@ def test_attrs(packet_resource, packet_device, attr, should):
 
 
 @pytest.mark.parametrize(
-    'group', ['packet_operating_system=centos_7',
-              'packet_locked=False',
-              'packet_facility=ams1',
-              'packet_plan=baremetal_0',
-              'packet_state=active',
-              'packet_metadata_role=workstation',
-              'role=workstation',
-              'dc=ams1']
+    'group', ['packet_operating_system_centos_7',
+              'packet_locked_False',
+              'packet_facility_ams1',
+              'packet_plan_baremetal_0',
+              'packet_state_active',
+              'packet_metadata_role_workstation',
+              'role_workstation',
+              'dc_ams1']
 )
 def test_groups(packet_resource, packet_device, group):
     _, _, groups = packet_device(packet_resource, 'module_name')

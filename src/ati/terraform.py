@@ -100,6 +100,9 @@ def _clean_dc(dcname):
     # ensure that the consul_dc attribute meets these requirements.
     return re.sub('[^\w_\-]', '-', dcname)
 
+def _clean_ansible(name):
+    # ansible 2.4+ group names for non-dynamic inventories are alphanumeric or _
+    return re.sub('[^\w_]', '_', name)
 
 def iterhosts(resources, args):
     '''yield host tuples of (name, attributes, groups)'''
@@ -137,6 +140,9 @@ def calculate_mantl_vars(func):
         # groups
         if attrs.get('publicly_routable', False):
             groups.append('publicly_routable')
+
+        # sanitize ansible group names
+        groups = [_clean_ansible(g) for g in groups]
 
         return name, attrs, groups
 

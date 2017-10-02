@@ -58,9 +58,9 @@ def test_attrs(digitalocean_resource, digitalocean_host, attr, should):
 
 
 @pytest.mark.parametrize(
-    'group', ['do_image=centos-7-0-x64', 'do_locked=False', 'do_region=nyc3',
-              'do_size=4gb', 'do_status=active', 'do_metadata_role=control',
-              'do_tag=test_tag', 'role=control', 'dc=nyc3']
+    'group', ['do_image_centos_7_0_x64', 'do_locked_False', 'do_region_nyc3',
+              'do_size_4gb', 'do_status_active', 'do_metadata_role_control',
+              'do_tag_test_tag', 'role_control', 'dc_nyc3']
 )
 def test_groups(digitalocean_resource, digitalocean_host, group):
     _, _, groups = digitalocean_host(digitalocean_resource, 'module_name')

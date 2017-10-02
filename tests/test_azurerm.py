@@ -80,7 +80,7 @@ def test_attrs(azurerm_resource, azurerm_host, attr, should):
 
 
 @pytest.mark.parametrize('group', [
-        'role=myrole'
+        'role_myrole'
 ])
 def test_groups(azurerm_resource, azurerm_host, group):
     _, _, groups = azurerm_host(azurerm_resource, 'ukwest')

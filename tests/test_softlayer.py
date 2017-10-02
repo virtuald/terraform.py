@@ -61,7 +61,7 @@ def test_attrs(softlayer_resource, softlayer_host, attr, should):
 
 
 @pytest.mark.parametrize(
-    'group', ['dc=mi', 'role=control']
+    'group', ['dc_mi', 'role_control']
 )
 def test_groups(softlayer_resource, softlayer_host, group):
     _, _, groups = softlayer_host(softlayer_resource, 'module_name')

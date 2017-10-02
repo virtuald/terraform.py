@@ -109,15 +109,15 @@ def test_attrs(gce_resource, gce_host, attr, should):
 
 
 @pytest.mark.parametrize('group', [
-    'gce_image=centos-7-v20150423',
-    'gce_machine_type=n1-standard-1',
-    'gce_metadata_dc=gce-dc',
-    'gce_metadata_role=control',
-    'gce_tag=mi',
-    'gce_tag=control',
+    'gce_image_centos_7_v20150423',
+    'gce_machine_type_n1_standard_1',
+    'gce_metadata_dc_gce_dc',
+    'gce_metadata_role_control',
+    'gce_tag_mi',
+    'gce_tag_control',
     'gce_publicly_routable',
-    'role=control',
-    'dc=gce-dc',
+    'role_control',
+    'dc_gce_dc',
 ])
 def test_groups(gce_resource, gce_host, group):
     _, _, groups = gce_host(gce_resource, 'module_name')

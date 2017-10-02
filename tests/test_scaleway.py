@@ -72,8 +72,8 @@ def test_attrs(scaleway_resource, scaleway_host, attr, should):
 
 @pytest.mark.parametrize(
     'group',
-    ['scaleway_image=7258ac9b-61e7-4f69-a72d-b424de25fe84', 'scaleway_type=VC1M', 'scaleway_state=running',
-     'scaleway_tag=frontend', 'scaleway_tag=dev', 'scaleway_tag=lga'])
+    ['scaleway_image_7258ac9b_61e7_4f69_a72d_b424de25fe84', 'scaleway_type_VC1M', 'scaleway_state_running',
+     'scaleway_tag_frontend', 'scaleway_tag_dev', 'scaleway_tag_lga'])
 def test_groups(scaleway_resource, scaleway_host, group):
     _, _, groups = scaleway_host(scaleway_resource, 'module_name')
     assert group in groups

@@ -91,13 +91,13 @@ def test_attrs(azure_resource, azure_host, attr, should):
 
 
 @pytest.mark.parametrize('group', [
-    'azure_username=ubuntu',
-    'dc=north-europe',
-    'azure_location=north-europe',
-    'azure_image=apollo-ubuntu-14.04-amd64-1444419199',
-    'role=mesos_masters',
-    'azure_security_group=default-apollo-mesos',
-    'role=mesos_masters'
+    'azure_username_ubuntu',
+    'dc_north_europe',
+    'azure_location_north_europe',
+    'azure_image_apollo_ubuntu_14_04_amd64_1444419199',
+    'role_mesos_masters',
+    'azure_security_group_default_apollo_mesos',
+    'role_mesos_masters'
 ])
 def test_groups(azure_resource, azure_host, group):
     _, _, groups = azure_host(azure_resource, 'North_Europe')

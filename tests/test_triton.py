@@ -88,12 +88,12 @@ def test_attrs(triton_resource, triton_machine, attr, should):
 
 
 @pytest.mark.parametrize(
-    'group', ['triton_image=dd31507e-031e-11e6-be8a-8f2707b5b3ee',
-              'triton_package=Medium 4GB', 'triton_state=running',
-              'triton_firewall_enabled=False', 'triton_tags_role=control',
-              'triton_network=56f0fd52-4df1-49bd-af0c-81c717ea8bce',
-              'triton_network=65ae3604-7c5c-4255-9c9f-6248e5d78900',
-              'role=control', 'dc=none'],
+    'group', ['triton_image_dd31507e_031e_11e6_be8a_8f2707b5b3ee',
+              'triton_package_Medium_4GB', 'triton_state_running',
+              'triton_firewall_enabled_False', 'triton_tags_role_control',
+              'triton_network_56f0fd52_4df1_49bd_af0c_81c717ea8bce',
+              'triton_network_65ae3604_7c5c_4255_9c9f_6248e5d78900',
+              'role_control', 'dc_none'],
 )
 def test_groups(triton_resource, triton_machine, group):
     _, _, groups = triton_machine(triton_resource, 'module_name')

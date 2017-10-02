@@ -85,8 +85,8 @@ def test_attrs(ddcloud_resource, ddcloud_server, attr, should):
 
 
 @pytest.mark.parametrize('group', [
-    'role=edge',
-    'dc=au9',
+    'role_edge',
+    'dc_au9',
 ])
 def test_groups(ddcloud_resource, ddcloud_server, group):
     _, _, groups = ddcloud_server(ddcloud_resource, 'module_name')

@@ -55,8 +55,8 @@ def test_attrs(ucs_resource, ucs_host, attr, should):
     assert attrs[attr] == should
 
 @pytest.mark.parametrize('group', [
-    'role=control',
-    'dc=root',
+    'role_control',
+    'dc_root',
 ])
 def test_groups(ucs_resource, ucs_host, group):
     _, _, groups = ucs_host(ucs_resource, 'root')

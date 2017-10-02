@@ -90,12 +90,12 @@ def test_attrs(openstack_resource, openstack_host, attr, should):
     assert attrs[attr] == should
 
 @pytest.mark.parametrize('group', [
-    'os_image=centos-7_x86_64-2015-01-27-v6',
-    'os_flavor=CO2-2XLarge',
-    'os_metadata_role=control',
-    'os_region=eu-amsterdam-1',
-    'role=control',
-    'dc=module_name',
+    'os_image_centos_7_x86_64_2015_01_27_v6',
+    'os_flavor_CO2_2XLarge',
+    'os_metadata_role_control',
+    'os_region_eu_amsterdam_1',
+    'role_control',
+    'dc_module_name',
 ])
 def test_groups(openstack_resource, openstack_host, group):
     _, _, groups = openstack_host(openstack_resource, 'module_name')
